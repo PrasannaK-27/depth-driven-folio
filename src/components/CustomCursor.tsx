@@ -16,7 +16,7 @@ export function CustomCursor() {
     if (!el) return;
 
     const move = (e: PointerEvent) => {
-      el.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+      el.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
       setVisible(true);
       const target = e.target as HTMLElement | null;
       setActive(!!target?.closest("a, button, [data-cursor='hover'], input, textarea"));
